@@ -1,12 +1,12 @@
-// decalare global variables
+// declare global variables
 let displayNumbers = [];
-let decimalOnDisplay = false; // We only want the . button to regester only once on the display
+let decimalOnDisplay = false; // We only want the . button to register only once on the display
 let prevNumber = 0; // this will temporarily store the number on the display for the next operation (x)
 let getCurrentNumber = () => Number(displayNumbers.join('')); // this will be used as the second number in the current operation (y)
 let currentNumber = 0;
 let currentOp = ''; // this will store the current operator
 let reqOp = ''; // this will store the requested operator
-let prevOp = ''; // this is used for spaming the '=' button --borken function, spamming '=' does nothing, doesnt break anything either.
+let prevOp = ''; // this is used for spamming the '=' button --broken function, spamming '=' does nothing, doesn't break anything either.
 let target = 0; // this is the current target number or rolling answer
 const display = document.getElementById('display');
 
@@ -94,7 +94,7 @@ function createButtons(numbers, operators) {
 			});
 			return;
 		}
-		// we dont need preceeding zeros
+		// we do n0t need preceding zeros
 		if (number == 0) {
 			button.addEventListener('click', () => {
 				if (displayNumbers.length == 0) {
@@ -106,7 +106,7 @@ function createButtons(numbers, operators) {
 			});
 			return;
 		}
-		// make number buttons populate the dispaly
+		// make number buttons populate the display
 		button.addEventListener('click', () => {
 			displayNumbers.push(number);
 			displayUpdate();
@@ -163,6 +163,6 @@ function createButtons(numbers, operators) {
 	});
 }
 
-//initate the calculator and display
+//initiate the calculator and display
 displayUpdate(displayNumbers);
 createButtons(numberButtons, operatorButtons);
