@@ -5,15 +5,14 @@ let secondMemo = 0;
 let result = 0;
 let numberBtns = document.getElementsByClassName('numBtn');
 let pressedOp = 'defaultify';
+let pressedEquals = false;
 
 console.log(display);
 // functions for add subtract multiply divide power
 function equals() {
 	switch (pressedOp) {
 		case 'add':
-			result = add(memo, secondMemo);
-			memo = result;
-			break;
+			return add(memo, secondMemo);
 		case 'subtract':
 			result = subtract(memo, secondMemo);
 			memo = result;
@@ -59,7 +58,7 @@ function power(a, b) {
 	let res = 0;
 	let i = 0;
 	for (; i < b; i++) {
-		result = a * res;
+		res = a * res;
 	}
 	return res;
 }
@@ -67,28 +66,41 @@ function power(a, b) {
 for (let i = 0; i < numberBtns.length; i++) {
 	numberBtns.item(i).addEventListener('click', function () {
 		result = result * 10 + i;
-		memo = result;
+		secondMemo = result;
 		updateDisplay();
 	});
 }
 // adds event listeners to operator buttons
-document.getElementById('add').addEventListener('click', function (x) {
-	pressedOp = 'add';
-	equals();
-	secondMemo = result;
-	clearDisplay();
+document.getElementById('add').addEventListener('click', function () {
+	if (pressedEquals == true) {
+		pressedEquals = false;
+		updateDisplay();
+		result = 0;
+		console.log('m', memo, 'sM', secondMemo, 'res', result);
+	} else {
+		pressedOp = 'add';
+		memo = equals();
+		result = memo;
+		updateDisplay();
+		console.log('m', memo, 'sM', secondMemo, 'res', result);
+		result = 0;
+	}
 });
 document.getElementById('equals').addEventListener('click', function () {
-	equals();
+	pressedEquals = true;
+	result = equals();
 	updateDisplay();
-	console.log(memo, secondMemo, result);
+	memo = result;
+	console.log('m', memo, 'sM', secondMemo, 'res', result);
 });
-
 function updateDisplay() {
 	display.innerHTML = result;
 }
 // clears display
 function clearDisplay() {
 	result = 0;
+	memo = 0;
+	secondMemo = 0;
+	updateDisplay();
 }
 // memory 1 and 2
