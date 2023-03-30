@@ -1,13 +1,39 @@
 // globals
-let displayArray = [];
-let displayNum = 0;
 let display = document.getElementById('display');
-let displayNumber = display.innerText;
 let memo = 0;
-let pressedNumber = document.getElementsByClassName('numBtn');
-let pressedOperator = document.getElementsByClassName('opBtn');
-// functions for add subtract multiply divide power
+let secondMemo = 0;
+let result = 0;
+let numberBtns = document.getElementsByClassName('numBtn');
+let pressedOp = 'defaultify';
 
+console.log(display);
+// functions for add subtract multiply divide power
+function equals() {
+	switch (pressedOp) {
+		case 'add':
+			result = add(memo, secondMemo);
+			memo = result;
+			break;
+		case 'subtract':
+			result = subtract(memo, secondMemo);
+			memo = result;
+			break;
+		case 'multiply':
+			result = multiplies(memo, secondMemo);
+			memo = result;
+			break;
+		case 'divide':
+			result = divide(memo, secondMemo);
+			memo = result;
+			break;
+		case 'power':
+			result = power(memo, secondMemo);
+			memo = result;
+			break;
+		default:
+			result = Math.floor(Math.random() * 9999999999) + 1;
+	}
+}
 // adds two numbers returns the result
 function add(a, b) {
 	return a + b;
@@ -30,20 +56,39 @@ function power(a, b) {
 	if (b == 0) {
 		return 1;
 	}
-	let result = 0;
+	let res = 0;
 	let i = 0;
 	for (; i < b; i++) {
-		result = a * result;
+		result = a * res;
 	}
-	return result;
+	return res;
 }
-// adds pressed numbers to an array
-pressedNumber.addeventlistener('click', function (x) {
-	displayArray.push(pressedNumber);
-	displayNumber = displayNumber + x.innerText;
+// adds event listeners to number buttons
+for (let i = 0; i < numberBtns.length; i++) {
+	numberBtns.item(i).addEventListener('click', function () {
+		result = result * 10 + i;
+		memo = result;
+		updateDisplay();
+	});
+}
+// adds event listeners to operator buttons
+document.getElementById('add').addEventListener('click', function (x) {
+	pressedOp = 'add';
+	equals();
+	secondMemo = result;
+	clearDisplay();
 });
-// takes array and makes it a number
+document.getElementById('equals').addEventListener('click', function () {
+	equals();
+	updateDisplay();
+	console.log(memo, secondMemo, result);
+});
 
-// update display
-
+function updateDisplay() {
+	display.innerHTML = result;
+}
+// clears display
+function clearDisplay() {
+	result = 0;
+}
 // memory 1 and 2
