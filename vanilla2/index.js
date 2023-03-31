@@ -4,33 +4,25 @@ let memo = 0;
 let secondMemo = 0;
 let result = 0;
 let numberBtns = document.getElementsByClassName('numBtn');
+let opBtns = document.getElementsByClassName('opBtn');
 let pressedOp = 'defaultify';
 let pressedEquals = false;
 
-console.log(display);
 // functions for add subtract multiply divide power
 function equals() {
 	switch (pressedOp) {
 		case 'add':
 			return add(memo, secondMemo);
 		case 'subtract':
-			result = subtract(memo, secondMemo);
-			memo = result;
-			break;
+			return subtract(memo, secondMemo);
 		case 'multiply':
-			result = multiplies(memo, secondMemo);
-			memo = result;
-			break;
+			return multiplies(memo, secondMemo);
 		case 'divide':
-			result = divide(memo, secondMemo);
-			memo = result;
-			break;
+			return divide(memo, secondMemo);
 		case 'power':
-			result = power(memo, secondMemo);
-			memo = result;
-			break;
+			return power(memo, secondMemo);
 		default:
-			result = Math.floor(Math.random() * 9999999999) + 1;
+			return Math.floor(Math.random() * 9999999999) + 1;
 	}
 }
 // adds two numbers returns the result
@@ -71,27 +63,34 @@ for (let i = 0; i < numberBtns.length; i++) {
 	});
 }
 // adds event listeners to operator buttons
-document.getElementById('add').addEventListener('click', function () {
-	if (pressedEquals == true) {
-		pressedEquals = false;
-		updateDisplay();
-		result = 0;
-		console.log('m', memo, 'sM', secondMemo, 'res', result);
-	} else {
-		pressedOp = 'add';
-		memo = equals();
-		result = memo;
-		updateDisplay();
-		console.log('m', memo, 'sM', secondMemo, 'res', result);
-		result = 0;
-	}
-});
+for (let i = 0; i < opBtns.length; i++) {
+	console.log(opBtns[i].id);
+	document.getElementById(opBtns[i].id).addEventListener('click', function () {
+		console.log(opBtns[i].id, 'was clicked');
+		pressedOp = opBtns[i].id;
+		if (pressedEquals == true) {
+			pressedEquals = false;
+			updateDisplay();
+			result = 0;
+			console.log('m', memo, 'sM', secondMemo, 'res', result);
+		} else {
+			memo = equals();
+			result = memo;
+			updateDisplay();
+			console.log('m', memo, 'sM', secondMemo, 'res', result);
+			result = 0;
+		}
+	});
+}
 document.getElementById('equals').addEventListener('click', function () {
 	pressedEquals = true;
 	result = equals();
 	updateDisplay();
 	memo = result;
 	console.log('m', memo, 'sM', secondMemo, 'res', result);
+});
+document.getElementById('clear').addEventListener('click', function () {
+	clearDisplay();
 });
 function updateDisplay() {
 	display.innerHTML = result;
@@ -101,6 +100,8 @@ function clearDisplay() {
 	result = 0;
 	memo = 0;
 	secondMemo = 0;
+	pressedEquals = false;
+	pressedOp = 'defaultify';
 	updateDisplay();
 }
 // memory 1 and 2
