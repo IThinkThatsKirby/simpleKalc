@@ -74,7 +74,7 @@ for (let i = 0; i < opBtns.length; i++) {
 			result = 0;
 			console.log('m', memo, 'sM', secondMemo, 'res', result);
 		} else {
-			memo = equals();
+			memo = secondMemo;
 			result = memo;
 			updateDisplay();
 			console.log('m', memo, 'sM', secondMemo, 'res', result);
