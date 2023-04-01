@@ -64,20 +64,16 @@ for (let i = 0; i < numberBtns.length; i++) {
 }
 // adds event listeners to operator buttons
 for (let i = 0; i < opBtns.length; i++) {
-	console.log(opBtns[i].id);
 	document.getElementById(opBtns[i].id).addEventListener('click', function () {
-		console.log(opBtns[i].id, 'was clicked');
 		pressedOp = opBtns[i].id;
 		if (pressedEquals == true) {
 			pressedEquals = false;
 			updateDisplay();
 			result = 0;
-			console.log('m', memo, 'sM', secondMemo, 'res', result);
 		} else {
 			memo = secondMemo;
 			result = memo;
 			updateDisplay();
-			console.log('m', memo, 'sM', secondMemo, 'res', result);
 			result = 0;
 		}
 	});
@@ -87,7 +83,6 @@ document.getElementById('equals').addEventListener('click', function () {
 	result = equals();
 	updateDisplay();
 	memo = result;
-	console.log('m', memo, 'sM', secondMemo, 'res', result);
 });
 document.getElementById('clear').addEventListener('click', function () {
 	clearDisplay();
