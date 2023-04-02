@@ -22,7 +22,7 @@ function equals() {
 		case 'power':
 			return power(memo, secondMemo);
 		default:
-			return Math.floor(Math.random() * 9999999999) + 1;
+			return secondMemo;
 	}
 }
 // adds two numbers returns the result
@@ -43,20 +43,22 @@ function divide(a, b) {
 }
 // raises a number to the power of another number returns the result
 function power(a, b) {
+	let res = new Number(a);
+	let i = 1;
 	// power of 0 is 1 because they said so;
-	if (b == 0) {
-		return 1;
-	}
-	let res = 0;
-	let i = 0;
-	for (; i < b; i++) {
-		res = a * res;
+	if (b === 0) {
+		res = 1;
+	} else {
+		for (; i < b; i++) {
+			res = a * res;
+		}
 	}
 	return res;
 }
 // adds event listeners to number buttons
 for (let i = 0; i < numberBtns.length; i++) {
 	numberBtns.item(i).addEventListener('click', function () {
+		pressedEquals == true ? clearDisplay() : null;
 		result = result * 10 + i;
 		secondMemo = result;
 		updateDisplay();
