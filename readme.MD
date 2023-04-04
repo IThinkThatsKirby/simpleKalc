@@ -7,7 +7,7 @@ This repo contains Calculator speedruns, a benchmark to elucidate my current abl
 - Spent over 50% of the time reading css documentation AGAIN.
 - fully working ezpz.
 - developed a stack mindset to solving problems, cant wait to use it on attempt 3.
-- CSS is harder than learning the rust.
+- CSS is harder than learning Rust.
 
 ---
 
