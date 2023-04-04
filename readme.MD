@@ -2,6 +2,15 @@
 
 This repo contains Calculator speedruns, a benchmark to elucidate my current ableness.
 
+#### 04/04/12023 -- MVP - Vanilla Any% - 1:24:00
+
+- Spent over 50% of the time reading css documentation AGAIN.
+- fully working ezpz.
+- developed a stack mindset to solving problems, cant wait to use it on attempt 3.
+- CSS is harder than learning the rust.
+
+---
+
 #### 02/03/12023 -- MVP - Vanilla Any% - 3:05:00
 
 - spamming '=' does nothing, but doesnt break anything either.
