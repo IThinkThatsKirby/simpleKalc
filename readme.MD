@@ -8,7 +8,7 @@ This repo contains Calculator speedruns, a benchmark to elucidate my current abl
 - fully working ezpz.
 - developed a stack mindset to solving problems, cant wait to use it on attempt 3.
 - CSS is harder than learning Rust.
-- ITS COMPLETLY BROKEN ON MOBILE lol.
+- ITS COMPLETLY BROKEN on anything that isnt my 900x1600 side monitor... lol, ill fix it and add more time when I get to it.
 
 ---
 
