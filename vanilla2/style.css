@@ -1,5 +1,6 @@
-#calc {
+.calc {
 	background: pink;
+	border: 2px solid mediumslateblue;
 	display: flex;
 	width: 30vw;
 	height: 30vw;
@@ -7,16 +8,76 @@
 	flex-direction: column;
 	flex-wrap: nowrap;
 }
-
-#display {
+.display {
 	background: peachpuff;
 	height: 10%;
 	width: 90%;
+	color: darkslateblue;
 	margin-top: 0.5em;
-
 	margin-bottom: 0.5em;
 	align-self: center;
 	font-size: 1.2em;
 	text-align: right;
 	font-weight: 700;
+	padding-right: 0.7em;
+	box-shadow: 0px 0px 0.7em 0px palevioletred inset;
+}
+.btnContainer {
+	background: plum;
+	width: 90%;
+	align-self: center;
+	height: 80%;
+	display: flex;
+	flex-direction: row;
+}
+.numberBtns {
+	background: violet;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 75%;
+	margin: 0.6em;
+	padding: 0.5em;
+}
+.numBtn {
+	font-size: 2.5em;
+	line-height: 1em;
+	width: 1.2em;
+	height: 25%;
+	background: rgb(180, 247, 255);
+}
+.operatorBtns {
+	margin-left: auto;
+	display: flex;
+	flex-direction: column;
+	background: violet;
+	align-self: center;
+	width: 15%;
+	margin-right: 0.5em;
+	padding-left: 0.5em;
+	padding-right: 0.3em;
+	padding-top: 0.2em;
+	padding-bottom: 0.1em;
+	justify-content: space-around;
+}
+.opBtn {
+	background: rgb(180, 247, 255);
+	font-weight: 700;
+	font-size: 1.2em;
+}
+.eqBtn {
+	background: lightsalmon;
+	font-size: 2.5em;
+	line-height: 1em;
+	width: 65%;
+}
+.clrBtn {
+	width: 110%;
+	font-size: 1.5em;
+	font-weight: 700;
+	line-height: 15%;
+	align-self: center;
+	background: cadetblue;
+	height: 1.2em;
 }
