@@ -99,6 +99,6 @@ function clearDisplay() {
 	secondMemo = 0;
 	pressedEquals = false;
 	pressedOp = 'defaultify';
-	updateDisplay();
+	display.innerHTML = 'Its calcin time';
 }
 // memory 1 and 2

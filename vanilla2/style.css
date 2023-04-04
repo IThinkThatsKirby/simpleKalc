@@ -1,0 +1,22 @@
+#calc {
+	background: pink;
+	display: flex;
+	width: 30vw;
+	height: 30vw;
+	margin: auto;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+#display {
+	background: peachpuff;
+	height: 10%;
+	width: 90%;
+	margin-top: 0.5em;
+
+	margin-bottom: 0.5em;
+	align-self: center;
+	font-size: 1.2em;
+	text-align: right;
+	font-weight: 700;
+}
