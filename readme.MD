@@ -2,13 +2,15 @@
 
 This repo contains Calculator speedruns, a benchmark to elucidate my current ableness.
 
-#### 04/04/12023 -- MVP - Vanilla Any% - 1:24:00
+#### 04/04/12023 -- MVP - Vanilla Any% - 2:24:00
 
 - Spent over 50% of the time reading css documentation AGAIN.
 - fully working ezpz.
 - developed a stack mindset to solving problems, cant wait to use it on attempt 3.
 - CSS is harder than learning Rust.
-- ITS COMPLETLY BROKEN on anything that isnt my 900x1600 side monitor... lol, ill fix it and add more time when I get to it.
+- ~ITS COMPLETLY BROKEN on anything that isnt my 900x1600 side monitor... lol, ill fix it and add more time when I get to it.~
+- Fixed broken css, increased time to compleation by 1 hour D:
+- css is my white whale >:(
 
 ---
 
