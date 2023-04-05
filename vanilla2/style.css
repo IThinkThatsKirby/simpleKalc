@@ -53,12 +53,10 @@
 	background: rgb(180, 247, 255);
 }
 .operatorBtns {
-	/* margin-left: auto; */
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	background: violet;
-	/* align-self: center; */
 	margin: 5%;
 	width: 40%;
 	height: 80%;
