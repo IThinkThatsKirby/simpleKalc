@@ -2,10 +2,13 @@
 	background: pink;
 	border: 2px solid mediumslateblue;
 	display: flex;
-	width: 30vw;
-	height: 30vw;
+	width: 90vw;
+	max-width: fit-content;
+	max-height: fit-content;
 	margin: auto;
 	flex-direction: column;
+	flex-wrap: nowrap;
+	flex-grow: 3;
 	flex-wrap: nowrap;
 }
 .display {
@@ -16,68 +19,77 @@
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 	align-self: center;
-	font-size: 1.2em;
+	font-size: 2em;
 	text-align: right;
+	line-height: 3em;
 	font-weight: 700;
 	padding-right: 0.7em;
-	box-shadow: 0px 0px 0.7em 0px palevioletred inset;
+	box-shadow: 0px 0px 2em 0px palevioletred inset;
 }
 .btnContainer {
 	background: plum;
-	width: 90%;
-	align-self: center;
-	height: 80%;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
 }
 .numberBtns {
 	background: violet;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	width: 75%;
-	margin: 0.6em;
+	justify-content: space-between;
+	margin: 5%;
+	height: 80%;
 	padding: 0.5em;
 }
 .numBtn {
-	font-size: 2.5em;
+	font-size: 3.5rem;
 	line-height: 1em;
-	width: 1.2em;
-	height: 25%;
+	width: 30%;
+	height: 20%;
+	margin-top: 2%;
+	margin-bottom: 2%;
 	background: rgb(180, 247, 255);
 }
 .operatorBtns {
-	margin-left: auto;
+	/* margin-left: auto; */
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
 	background: violet;
-	align-self: center;
-	width: 15%;
-	margin-right: 0.5em;
-	padding-left: 0.5em;
-	padding-right: 0.3em;
-	padding-top: 0.2em;
-	padding-bottom: 0.1em;
+	/* align-self: center; */
+	margin: 5%;
+	width: 40%;
+	height: 80%;
+	align-items: center;
+	padding: 1%;
+	margin: 5%;
 	justify-content: space-around;
 }
 .opBtn {
 	background: rgb(180, 247, 255);
 	font-weight: 700;
-	font-size: 1.2em;
+	font-size: 3em;
+	height: 30%;
+	width: 90%;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 .eqBtn {
 	background: lightsalmon;
 	font-size: 2.5em;
-	line-height: 1em;
+	line-height: 20%;
+	font-weight: 700;
+	margin-top: 2%;
+	margin-bottom: 2%;
 	width: 65%;
 }
 .clrBtn {
-	width: 110%;
-	font-size: 1.5em;
+	width: 95%;
 	font-weight: 700;
-	line-height: 15%;
-	align-self: center;
+	font-size: 3em;
+	margin-left: auto;
+	margin-right: auto;
 	background: cadetblue;
-	height: 1.2em;
 }
