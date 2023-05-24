@@ -25,10 +25,4 @@ This repo contains Calculator speedruns, a benchmark to elucidate my current abl
 
 ---
 
-### TLDR -- Mental health is not option. Take charge of it. Be honest with yourself.
-
-After a decade of mounting struggles and external toxicity I started to break down, and something was going to give.
-
--- deleted essay of events to personal to share --
-
-I took a long break to focus on my mental health, and worked hard to remove negativity(in all its forms) from my life. Creating a healthy environment was a full time job, but I am better for it. This calculator served as a benchmark to assess what I remembered and the speed at which I can read and implement information from documentation. Results are conclusive, I have been found able.
+### Mental health is not option. Take charge of it. Be honest with yourself.
